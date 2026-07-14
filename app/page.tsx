@@ -14,95 +14,107 @@ export default function Home() {
 
         fontFamily: "Arial, sans-serif",
 
-        backgroundColor: "#f7f2e8",
-
-        minHeight: "100vh",
-
       }}
 
     >
 
-      <h1
+      <header
 
         style={{
+
+          borderBottom: "2px solid #ccc",
+
+          paddingBottom: "20px",
+
+          marginBottom: "30px",
 
           textAlign: "center",
 
-          color: "#5b3a29",
-
-          fontSize: "42px",
-
         }}
 
       >
 
-        🖼️ Virtual Postcard Museum
+        <h1>🖼️ Virtual Postcard Museum</h1>
 
-      </h1>
+        <p>Discover history one postcard at a time.</p>
 
-      <p
+      </header>
+
+      <nav
 
         style={{
 
-          textAlign: "center",
+          display: "flex",
 
-          fontSize: "22px",
+          justifyContent: "center",
 
-          color: "#555",
+          gap: "30px",
 
-        }}
+          marginBottom: "40px",
 
-      >
-
-        Discover history one postcard at a time.
-
-      </p>
-
-      <hr />
-
-      <div
-
-        style={{
-
-          background: "white",
-
-          padding: "30px",
-
-          borderRadius: "12px",
-
-          marginTop: "30px",
-
-          boxShadow: "0 4px 10px rgba(0,0,0,.15)",
+          fontWeight: "bold",
 
         }}
 
       >
 
-        <h2>Coming Soon</h2>
+        <span>Home</span>
 
-        <ul style={{ lineHeight: "2" }}>
+        <span>Collection</span>
 
-          <li>📬 Thousands of vintage postcards</li>
+        <span>About</span>
 
-          <li>🌎 Browse by country</li>
+      </nav>
+<section
 
-          <li>📅 Search by year</li>
+  style={{
 
-          <li>❤️ Save favorites</li>
+    backgroundColor: "#f8f8f8",
 
-          <li>💬 Visitor comments</li>
+    padding: "30px",
 
-          <li>🤖 AI postcard descriptions</li>
+    borderRadius: "10px",
 
-        </ul>
+  }}
 
-      </div>
+>
+
+  <h2>Featured Exhibit</h2>
+
+  <p>
+
+    Welcome to the Virtual Postcard Museum. This collection will preserve and
+
+    share historic postcards from around the world.
+
+  </p>
+
+  <h3>Coming Soon</h3>
+
+  <ul style={{ lineHeight: "2" }}>
+
+    <li>🖼️ Thousands of vintage postcards</li>
+
+    <li>🌍 Browse by country</li>
+
+    <li>📅 Search by year</li>
+
+    <li>❤️ Save favorites</li>
+
+    <li>💬 Visitor comments</li>
+
+    <li>🤖 AI-powered postcard descriptions</li>
+
+  </ul>
+
+</section>
+
+
 
     </main>
 
   );
 
 }
-
 
 
