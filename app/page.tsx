@@ -59,6 +59,29 @@ export default function Home() {
     useState<FeaturedPostcard | null>(null);
   const [featuredLoading, setFeaturedLoading] = useState(true);
   const [isFlipped, setIsFlipped] = useState(false);
+  const [visitorCount, setVisitorCount] = useState<number | null>(null);
+  useEffect(() => {
+  let visitorId = window.localStorage.getItem("vpm_visitor_id");
+
+  if (!visitorId) {
+    visitorId = crypto.randomUUID();
+    window.localStorage.setItem("vpm_visitor_id", visitorId);
+  }
+
+  void fetch("/api/visitor-count", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ visitorId }),
+    cache: "no-store",
+  })
+    .then((response) => (response.ok ? response.json() : null))
+    .then((data) => {
+      if (data?.enabled && typeof data.count === "number") {
+        setVisitorCount(data.count);
+      }
+    })
+    .catch(() => {});
+}, []);
 
   useEffect(() => {
     async function loadFeaturedPostcard() {
@@ -1487,6 +1510,11 @@ export default function Home() {
         <p style={{ margin: "14px 0 0" }}>
           Founded &amp; Curated by Clarence E. Pridemore Jr.
         </p>
+        {visitorCount !== null && (
+  <p style={{ margin: "14px 0 0", color: "#dfb860" }}>
+    Museum Visitors: {visitorCount.toLocaleString()}
+  </p>
+)}
 
         <p
           style={{
