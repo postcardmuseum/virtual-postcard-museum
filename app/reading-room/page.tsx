@@ -156,7 +156,7 @@ export default function ReadingRoomPage() {
       setCommentsLoading(true);
 
       const { data, error } = await supabase
-        .from("postcard_comments")
+                .from("public_postcard_comments")
         .select("id, visitor_name, comment_text, created_at")
         .eq("postcard_id", selectedId)
         .eq("status", "Approved")
