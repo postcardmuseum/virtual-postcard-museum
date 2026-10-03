@@ -1,9 +1,6 @@
 import OpenAI from "openai";
+import { createClient } from "@supabase/supabase-js";
 import { NextResponse } from "next/server";
-
-const client = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
 
 function cleanString(value: unknown) {
   return typeof value === "string" ? value.trim() : "";
@@ -36,11 +33,60 @@ function extractJson(text: string) {
 
 export async function POST(request: Request) {
   try {
+    const authorization = request.headers.get("authorization");
+
+    if (!authorization?.startsWith("Bearer ")) {
+      return NextResponse.json(
+        { error: "You must be signed in as curator." },
+        { status: 401 }
+      );
+    }
+
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+    const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+    const curatorEmail = process.env.CURATOR_EMAIL;
+
+    if (!supabaseUrl || !supabaseAnonKey || !curatorEmail) {
+      return NextResponse.json(
+        { error: "The curator login settings are incomplete." },
+        { status: 500 }
+      );
+    }
+
+    const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+      auth: {
+        persistSession: false,
+        autoRefreshToken: false,
+      },
+    });
+
+    const {
+      data: { user },
+      error: userError,
+    } = await supabase.auth.getUser(
+      authorization.slice("Bearer ".length)
+    );
+
+    if (userError || !user) {
+      return NextResponse.json(
+        { error: "Please sign in again as curator." },
+        { status: 401 }
+      );
+    }
+
+    if (
+      !user.email ||
+      user.email.toLowerCase() !== curatorEmail.toLowerCase()
+    ) {
+      return NextResponse.json(
+        { error: "This account is not authorized to review postcards." },
+        { status: 403 }
+      );
+    }
+
     if (!process.env.OPENAI_API_KEY) {
       return NextResponse.json(
-        {
-          error: "OPENAI_API_KEY is not configured on the museum server.",
-        },
+        { error: "OPENAI_API_KEY is not configured on the museum server." },
         { status: 500 }
       );
     }
@@ -148,6 +194,10 @@ Cataloging rules:
       });
     }
 
+    const client = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+
     const response = await client.responses.create({
       model: "gpt-5-mini",
       input: [
@@ -188,12 +238,7 @@ Cataloging rules:
     console.error("Postcard AI analysis failed:", error);
 
     return NextResponse.json(
-      {
-        error:
-          error instanceof Error
-            ? error.message
-            : "The postcard AI review could not be completed.",
-      },
+      { error: "The postcard AI review could not be completed." },
       { status: 500 }
     );
   }

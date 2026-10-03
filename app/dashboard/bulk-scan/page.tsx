@@ -910,15 +910,27 @@ export default function BulkScanWorkbenchPage() {
           ? await prepareDataUrlForAi(pair.back)
           : null;
 
-      const response = await fetch("/api/analyze-postcard", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          frontImage,
-          backImage,
-          includeBackText: !skipBack,
-        }),
-      });
+    const {
+  data: { session },
+  error: sessionError,
+} = await supabase.auth.getSession();
+
+if (sessionError || !session?.access_token) {
+  throw new Error("Please sign in again as curator.");
+}
+
+const response = await fetch("/api/analyze-postcard", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${session.access_token}`,
+  },
+  body: JSON.stringify({
+    frontImage,
+    backImage,
+    includeBackText: !skipBack,
+  }),
+});
 
       const result = await response.json();
 
