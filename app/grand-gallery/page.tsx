@@ -24,7 +24,7 @@ type Postcard = {
 };
 
 const galleries = [
-  { href: "/florida", label: "Florida Gallery", icon: "🌴", tone: "florida" },
+  { href: "/collection/florida", label: "Florida Gallery", icon: "🌴", tone: "florida" },
   { href: "/california", label: "California Gallery", icon: "🌉", tone: "california" },
   { href: "/holiday", label: "Holiday Gallery", icon: "🎄", tone: "holiday" },
   { href: "/humor", label: "Humor Gallery", icon: "☺", tone: "humor" },
@@ -965,7 +965,7 @@ export default function GrandGalleryPage() {
         <div className="topbar-inner">
           <Link href="/">← Museum Entrance</Link>
           <div className="top-links">
-            <Link href="/florida" className="top-florida-link">Florida</Link>
+            <Link href="/collection/florida" className="top-florida-link">Florida</Link>
             <Link href="/california">California</Link>
             <Link href="/holiday">Holiday</Link>
             <Link href="/humor">Humor</Link>

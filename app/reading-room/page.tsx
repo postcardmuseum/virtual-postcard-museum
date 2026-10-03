@@ -104,7 +104,7 @@ export default function ReadingRoomPage() {
         string,
         { href: string; label: string }
       > = {
-        florida: { href: "/florida", label: "Florida Gallery" },
+        florida: { href: "/collection/florida", label: "Florida Gallery" },
         california: { href: "/california", label: "California Gallery" },
         humor: { href: "/humor", label: "Humor Gallery" },
         holiday: { href: "/holiday", label: "Holiday Gallery" },

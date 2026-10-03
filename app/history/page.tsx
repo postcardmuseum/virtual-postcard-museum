@@ -185,7 +185,7 @@ export default function HistoryPage() {
               </Link>
 
               <Link
-                href="/florida"
+                href="/collection/florida"
                 style={{ color: "#f8ecd1", textDecoration: "none" }}
               >
                 Florida Gallery
@@ -979,7 +979,7 @@ export default function HistoryPage() {
             Continue to the Grand Gallery
           </Link>
           <Link
-  href="/florida"
+  href="/collection/florida"
   style={{
     display: "inline-block",
     marginTop: "14px",

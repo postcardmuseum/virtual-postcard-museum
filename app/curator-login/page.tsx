@@ -79,6 +79,11 @@ export default function CuratorLogin() {
           onChange={(e) => setEmail(e.target.value)}
           style={{
             width: "100%",
+            background: "#fff8e8",
+color: "#3b2418",
+border: "1px solid #c79a3b",
+borderRadius: "6px",
+boxSizing: "border-box",
             padding: "12px",
             marginTop: "8px",
             marginBottom: "20px",
@@ -93,6 +98,11 @@ export default function CuratorLogin() {
           onChange={(e) => setPassword(e.target.value)}
           style={{
             width: "100%",
+            background: "#fff8e8",
+color: "#3b2418",
+border: "1px solid #c79a3b",
+borderRadius: "6px",
+boxSizing: "border-box",
             padding: "12px",
             marginTop: "8px",
             marginBottom: "25px",

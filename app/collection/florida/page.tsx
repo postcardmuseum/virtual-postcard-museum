@@ -1036,7 +1036,7 @@ export default function FloridaPage() {
     }}
   >
     <Link
-      href="/florida"
+      href="/collection/florida"
       style={{
         display: "inline-block",
         minWidth: "380px",
@@ -1207,7 +1207,7 @@ export default function FloridaPage() {
               }}
             >
               <Link
-                href="/florida"
+                href="/collection/florida"
                 style={{
                   color: "#7df9ff",
                   textDecoration: "none",

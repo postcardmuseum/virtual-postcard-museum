@@ -457,7 +457,7 @@ export default function CaliforniaPage() {
 
           <div className="museum-nav-links">
             <Link href="/grand-gallery">Grand Gallery</Link>
-            <Link href="/florida">Florida Gallery</Link>
+            <Link href="/collection/florida">Florida Gallery</Link>
             <Link href="/history">History of Postcards</Link>
           </div>
         </nav>
@@ -713,7 +713,7 @@ export default function CaliforniaPage() {
         <span>•</span>
         <Link href="/grand-gallery">Grand Gallery</Link>
         <span>•</span>
-        <Link href="/florida">Florida Gallery</Link>
+        <Link href="/collection/florida">Florida Gallery</Link>
         <span>•</span>
         <Link href="/history">History of Postcards</Link>
       </footer>

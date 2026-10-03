@@ -40,3 +40,13 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 /postcard-storage-backup/
+# Local backups and maintenance tools
+/supabase/.temp/
+/museum-database-backup.sql
+/backup-catalog.js
+/backup-postcards.js
+/backup-postcards.bat
+/backup-postcards - Shortcut.lnk
+/backup-r2.js
+/migrate-postcard-images-to-r2.js
+/florida

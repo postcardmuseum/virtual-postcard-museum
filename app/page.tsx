@@ -24,7 +24,7 @@ const featuredCollections = [
     title: "Florida Collection",
     description:
       "Explore historic hotels, restaurants, beaches, roadside attractions, and communities throughout the Sunshine State.",
-    href: "/florida",
+    href: "/collection/florida",
     icon: "🌴",
     background: "linear-gradient(135deg, #063c4a, #12677a)",
   },
@@ -368,7 +368,7 @@ export default function Home() {
             </Link>
 
             <Link
-              href="/florida"
+              href="/collection/florida"
               className="florida-nav-link"
             >
               Florida Gallery
@@ -1224,7 +1224,7 @@ export default function Home() {
         </Link>
 
         <Link
-          href="/florida"
+          href="/collection/florida"
           style={{
             display: "block",
             width: "100%",

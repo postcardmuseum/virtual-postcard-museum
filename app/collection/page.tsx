@@ -14,7 +14,7 @@ const openGalleries = [
     title: "Florida Gallery",
     subtitle: "The Sunshine State Collection",
     icon: "🌴",
-    href: "/florida",
+    href: "/collection/florida",
     description:
       "Explore Florida’s beaches, cities, hotels, roadside attractions, natural wonders, and changing communities.",
     details: "Over 1,000 Florida postcards",
@@ -290,7 +290,7 @@ export default function CollectionPage() {
               </Link>
 
               <Link
-                href="/florida"
+                href="/collection/florida"
                 style={{
                   color: "#fff3dc",
                   textDecoration: "none",

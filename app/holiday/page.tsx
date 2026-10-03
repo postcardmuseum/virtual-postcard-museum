@@ -219,13 +219,18 @@ export default function HolidayPage() {
         }
 
         .holiday-compact-image-wrap {
-          min-height: 250px;
+          height: 342px;
+min-height: 342px;
+box-sizing: border-box;
+max-width: 340px;
+margin: 0 auto;
           display: grid;
           place-items: center;
           padding: 12px;
           overflow: hidden;
-          background: #efe3ca;
-          border: 1px solid #816442;
+          background: #29483b;
+          border: 8px ridge #c59a4d;
+box-shadow: 0 5px 12px rgba(53, 28, 24, 0.25);
         }
 
         .holiday-compact-image {
