@@ -4,7 +4,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { supabase } from "../california/lib/supabase";
 
-
 type CommentStatus = "Pending" | "Approved" | "Hidden";
 
 type PostcardComment = {
@@ -39,10 +38,10 @@ const museumStatistics = [
 
 const officeTools = [
   {
-    title: "Catalog a New Postcard",
-    description: "Upload the front and back scans and create a permanent museum record.",
-    href: "/dashboard/add-postcard",
-    status: "Open Catalog Desk",
+    title: "Bulk Scan & Catalog",
+    description: "Review up to three postcards from front and back scans, then create their permanent museum records.",
+    href: "/dashboard/bulk-scan",
+    status: "Open Bulk Scan",
     active: true,
     icon: "✒",
   },
@@ -626,7 +625,7 @@ export default function DashboardPage() {
             </section>
 
             <nav className="quick-links">
-              <Link href="/dashboard/add-postcard">Catalog Postcard</Link>
+              <Link href="/dashboard/bulk-scan">Bulk Scan</Link>
               <Link href="/dashboard/manage">Manage Collection</Link>
               <a href="#comment-review">Review Comments</a>
               <Link href="/history">History Exhibit</Link>
