@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { supabase } from "./california/lib/supabase";
+import MuseumSignup from "./MuseumSignup";
 
 type FeaturedPostcard = {
   id: number;
@@ -1473,17 +1474,7 @@ export default function Home() {
             special collections, Curator’s Picks, and museum updates.
           </p>
 
-          <div
-            style={{
-              maxWidth: "560px",
-              margin: "30px auto 0",
-              padding: "18px 22px",
-              border: "1px dashed rgba(255,255,255,0.5)",
-              background: "rgba(255,255,255,0.08)",
-            }}
-          >
-            Mailing-list registration will open when the museum launches.
-          </div>
+                  <MuseumSignup />
         </div>
       </section>
 
