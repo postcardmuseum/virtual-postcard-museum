@@ -988,7 +988,12 @@ export default function FloridaPage() {
     }}
   >
     <Link
-      href="/florida?region=miami"
+      href="/collection/florida?region=miami"
+      onClick={() => {
+        setSelectedRegion("miami");
+        setSelectedCategory("All Florida");
+        setSearchText("");
+      }}
       style={{
         display: "inline-block",
         padding: "10px 16px",
@@ -1009,38 +1014,55 @@ export default function FloridaPage() {
     </Link>
 
     <Link
-      href="/florida?region=fort-lauderdale-hollywood"
+      href="/collection/florida?region=fort-lauderdale-hollywood"
+      onClick={() => {
+        setSelectedRegion("fort-lauderdale-hollywood");
+        setSelectedCategory("All Florida");
+        setSearchText("");
+      }}
       style={regionalButton}
     >
       Ft Lauderdale / Hollywood
     </Link>
 
     <Link
-      href="/florida?region=palm-beach"
+      href="/collection/florida?region=palm-beach"
+      onClick={() => {
+        setSelectedRegion("palm-beach");
+        setSelectedCategory("All Florida");
+        setSearchText("");
+      }}
       style={regionalButton}
     >
       Palm Beach
     </Link>
 
     <Link
-      href="/florida?region=old-florida"
+      href="/collection/florida?region=old-florida"
+      onClick={() => {
+        setSelectedRegion("old-florida");
+        setSelectedCategory("All Florida");
+        setSearchText("");
+      }}
       style={regionalButton}
     >
       Old Florida
     </Link>
   </div>
 
-  <div
-    style={{
-      marginTop: "12px",
-    }}
-  >
+  <div style={{ marginTop: "12px" }}>
     <Link
       href="/collection/florida"
+      onClick={() => {
+        setSelectedRegion("");
+        setSelectedCategory("All Florida");
+        setSearchText("");
+      }}
       style={{
         display: "inline-block",
-        minWidth: "380px",
-        padding: "10px 24px",
+        width: "100%",
+        maxWidth: "430px",
+        padding: "10px 16px",
         borderRadius: "7px",
         background:
           "linear-gradient(135deg, #173f47 0%, #0d6872 58%, #32505a 100%)",
@@ -1056,13 +1078,16 @@ export default function FloridaPage() {
       }}
     >
       <span style={{ color: "#e9bd61" }}>◆</span>
-      {"  "}
+      {" "}
       All Florida Exhibits
-      {"  "}
+      {" "}
       <span style={{ color: "#e9bd61" }}>◆</span>
     </Link>
   </div>
 </section>
+    
+        
+ 
       {/* COLLECTION */}
       <section
         id="florida-exhibits"
