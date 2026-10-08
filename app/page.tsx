@@ -122,7 +122,8 @@ export default function Home() {
   const nightDisplay = featuredPostcard?.night_display || "off";
 
   return (
-    <main
+        <main
+      className="museum-home"
       style={{
         minHeight: "100vh",
         background:
@@ -302,6 +303,112 @@ export default function Home() {
             padding-bottom: 6px !important;
           }
         }
+          @media (max-width: 960px) {
+  .museum-home,
+  .museum-home * {
+    box-sizing: border-box;
+  }
+
+  .museum-home .museum-top-nav,
+  .museum-home .museum-hero-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .museum-home .museum-top-nav > *,
+  .museum-home .museum-hero-grid > * {
+    min-width: 0;
+  }
+
+  .museum-home .featured-display-stage {
+    min-width: 0;
+    padding: 58px 12px 12px !important;
+  }
+
+  .featured-display-stage > [aria-hidden="true"]:nth-child(1),
+  .featured-display-stage > [aria-hidden="true"]:nth-child(2),
+  .featured-display-stage > [aria-hidden="true"]:nth-child(5),
+  .featured-display-stage > [aria-hidden="true"]:nth-child(6) {
+    left: 50% !important;
+  }
+
+  .featured-display-stage > [aria-hidden="true"]:nth-child(5) {
+    width: 98% !important;
+  }
+
+  .featured-display-stage > [aria-hidden="true"]:nth-child(6) {
+    width: 78% !important;
+  }
+
+  .featured-display-stage strong {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 560px) {
+  .museum-home .museum-hero-grid {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .museum-home .museum-welcome {
+    overflow-wrap: anywhere;
+  }
+
+  .featured-display-stage > [aria-hidden="true"]:nth-child(1) {
+    transform: translateX(-50%) scale(0.7) !important;
+    transform-origin: top center;
+  }
+}
+  @media (max-width: 560px) {
+  .museum-home > header {
+    padding: 8px 16px 4px !important;
+  }
+
+  .museum-home .museum-top-nav {
+    gap: 8px !important;
+  }
+
+  .museum-home .museum-nav-links {
+    gap: 8px 14px !important;
+    font-size: 13px !important;
+  }
+
+  .museum-home .museum-hero-grid {
+    padding-top: 8px !important;
+    gap: 4px !important;
+  }
+
+  .museum-home .museum-welcome {
+    padding: 0 4px !important;
+  }
+
+  .museum-home .museum-welcome h1 {
+    font-size: 30px !important;
+    line-height: 1.05 !important;
+  }
+
+  .museum-home .museum-welcome > p:first-child {
+    margin-bottom: 4px !important;
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+  }
+
+  .museum-home .museum-welcome > div[aria-hidden="true"] {
+    margin: 7px auto !important;
+  }
+
+  .museum-home .museum-welcome > p {
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+  }
+
+  .museum-home .museum-welcome > p:nth-last-child(2),
+  .museum-home .museum-welcome > p:last-child {
+    margin: 7px 0 !important;
+    letter-spacing: 0 !important;
+  }
+}
       `}</style>
 
       {/* ========================================= */}
@@ -512,6 +619,7 @@ export default function Home() {
           </p>
 
           <div
+                        className="featured-display-stage"
             style={{
               position: "relative",
               minHeight: "360px",

@@ -1581,6 +1581,89 @@ grid-template-rows: 1fr;
             padding: 17px;
           }
         }
+          @media (max-width: 620px) {
+  .room-shell {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .study-area,
+  .cabinet,
+  .drawer {
+    min-width: 0;
+  }
+
+  .archival-mat,
+  .archival-mat.portrait-frame {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .postcard-stage,
+  .postcard-stage.portrait-stage {
+    width: 100%;
+    min-width: 0;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+  }
+
+  .artifact-image {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: min(100%, calc(100vw - 150px)) !important;
+    max-height: min(245px, calc(100vw - 150px)) !important;
+    margin: 0 auto;
+  }
+}
+  @media (max-width: 620px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .sidebar > section:nth-of-type(2) {
+    order: -1;
+  }
+}
+  @media (max-width: 620px) {
+  .magnified-overlay {
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .magnified-overlay-card {
+    width: 100%;
+    height: calc(100dvh - 20px);
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 48px 12px 12px;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) auto;
+    gap: 12px;
+  }
+
+  .magnified-image-stage {
+    min-width: 0;
+    min-height: 0;
+    overflow: auto;
+  }
+
+  .magnified-overlay-controls {
+    width: 100%;
+    min-width: 0;
+    gap: 6px;
+  }
+
+  .magnified-overlay-controls button,
+  .magnified-overlay-controls a {
+    padding: 8px 10px !important;
+    font-size: 14px;
+  }
+}
       `}</style>
 
       <header className="room-header">
@@ -1796,7 +1879,7 @@ grid-template-rows: 1fr;
               
 
                 <p className="study-note">
-                  Click the postcard to open a full-card magnified view. Each magnification level keeps the entire postcard visible. Gallery Tour advances automatically every 10 seconds and pauses while magnification is open.
+                  Click the card to magnify. Tour changes cards every 10 seconds and pauses while magnified.
                   {nightMode
                     ? ` Night presentation: ${
                         neonNight ? "Neon Night" : "Subtle Night"

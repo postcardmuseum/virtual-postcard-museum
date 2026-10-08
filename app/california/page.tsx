@@ -436,17 +436,140 @@ export default function CaliforniaPage() {
           .featured-controls { padding: 0; }
         }
 
-        @media (max-width: 560px) {
-          .museum-nav { padding: 11px 14px 9px; }
-          .museum-nav-links { gap: 11px; font-size: 12px; }
-          .california-hero { min-height: 530px; }
-          .hero-center { padding: 18px 116px 26px 14px; }
-          .california-word { font-size: clamp(41px,14vw,64px); }
-          .hero-heading { font-size: 29px; }
-          .hero-description { font-size: 14px; }
-          .continue-plaque { width: 102px; right: 7px; }
-          .postcard-grid { grid-template-columns: 1fr; }
-        }
+      @media (max-width: 560px) {
+  .museum-nav {
+    padding: 11px 14px 9px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .museum-nav-links {
+    justify-content: center;
+    gap: 11px;
+    font-size: 12px;
+  }
+
+  .california-hero {
+    min-height: 0;
+    padding-bottom: 32px;
+  }
+
+  .hero-center {
+    padding: 20px 16px 16px;
+    text-align: center;
+  }
+
+  .museum-name,
+  .golden-coast {
+    letter-spacing: 2px;
+  }
+
+  .hero-title-frame {
+    width: 100%;
+    padding: 14px 10px;
+  }
+
+  .california-word {
+    font-size: clamp(28px, 9vw, 50px);
+    letter-spacing: 2px;
+    line-height: 1.1;
+  }
+
+  .hero-heading {
+    font-size: 29px;
+    text-align: center;
+    line-height: 1.15;
+  }
+
+  .hero-description {
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.4;
+    margin-top: 8px;
+  }
+
+  .continue-plaque {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    display: block;
+    width: 170px;
+    margin: 0 auto;
+    font-size: 10px;
+  }
+
+  .featured-zone {
+    padding: 12px 12px 18px;
+  }
+
+  .featured-compact {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 10px;
+    gap: 16px;
+  }
+
+  .featured-image-wrap {
+    width: 100% !important;
+    min-width: 0;
+    min-height: 320px !important;
+    padding: 20px;
+    border-width: 6px;
+  }
+
+  .featured-image-wrap::before,
+  .featured-image-wrap::after {
+    inset: 10px;
+  }
+
+  .featured-image-wrap img {
+    max-width: 100% !important;
+    max-height: min(300px, calc(100vw - 130px)) !important;
+    border-width: 5px;
+  }
+
+  .featured-controls {
+    min-width: 0;
+    padding: 0;
+  }
+
+  .featured-title,
+  .featured-description,
+  .featured-meta,
+  .california-card-info {
+    overflow-wrap: anywhere;
+  }
+
+  .museum-button {
+    white-space: normal;
+    line-height: 1.4;
+    padding: 12px 10px;
+  }
+
+  .collection-section {
+    padding: 24px 14px 40px;
+  }
+
+  .postcard-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .california-card {
+    min-width: 0;
+  }
+
+  .california-card-image img {
+    max-width: 100% !important;
+    max-height: min(245px, calc(100vw - 70px)) !important;
+  }
+
+  .collection-title {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .museum-footer {
+    line-height: 2;
+  }
+}
       `}</style>
 
       <section className="california-hero">

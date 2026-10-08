@@ -118,6 +118,7 @@ export default function HolidayPage() {
 
   return (
     <main
+      className="holiday-page"
       style={{
         minHeight: "100vh",
         backgroundColor: "#f6efe3",
@@ -398,6 +399,193 @@ box-shadow: 0 5px 12px rgba(53, 28, 24, 0.25);
             grid-template-columns: 1fr;
           }
         }
+          @media (max-width: 560px) {
+  .holiday-page > header > div {
+    padding: 14px 16px !important;
+  }
+
+  .holiday-page > header nav {
+    justify-content: center !important;
+    gap: 14px !important;
+    text-align: center;
+  }
+
+  .holiday-page > header nav > div {
+    justify-content: center;
+    gap: 12px !important;
+    font-size: 13px !important;
+  }
+
+  .holiday-page > header > section {
+    padding: 24px 16px 55px !important;
+  }
+
+  .holiday-page > header > section > p:first-child {
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+    line-height: 1.5;
+  }
+
+  .holiday-page > header > section > div {
+    padding: 12px 20px !important;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .holiday-page > header > section > div > span {
+    font-size: 36px !important;
+    letter-spacing: 2px !important;
+  }
+
+  .holiday-page > header h1 {
+    font-size: 36px !important;
+  }
+
+  .holiday-page > header > section > p:last-child {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+  }
+
+  .holiday-page > section:first-of-type {
+    padding: 0 12px !important;
+    margin: -24px auto 28px !important;
+  }
+
+  .holiday-page > section:first-of-type > div {
+    padding: 12px !important;
+  }
+
+  .holiday-feature-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .holiday-feature-layout > div {
+    min-width: 0;
+  }
+
+  .holiday-compact-card {
+    padding: 10px;
+    border-width: 6px;
+    min-width: 0;
+  }
+
+  .holiday-compact-image-wrap {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+    padding: 8px;
+    border-width: 6px;
+  }
+
+  .holiday-compact-image {
+    max-width: min(100%, calc(100vw - 140px)) !important;
+    max-height: min(280px, calc(100vw - 140px));
+    width: auto;
+    height: auto;
+  }
+
+  .holiday-compact-copy {
+    padding: 16px 4px 2px;
+    overflow-wrap: anywhere;
+  }
+
+  .holiday-compact-copy h2 {
+    font-size: 27px;
+    line-height: 1.2;
+  }
+
+  .holiday-compact-copy p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .holiday-feature-link {
+    display: block;
+    padding: 13px 10px;
+  }
+
+  .holiday-side-actions {
+    gap: 14px;
+  }
+
+  .holiday-direction-plaque,
+  .holiday-direction-plaque.secondary {
+    min-height: 0;
+    padding: 16px 12px;
+  }
+
+  .holiday-direction-plaque strong {
+    font-size: 21px;
+  }
+
+  .holiday-direction-plaque b {
+    font-size: 24px;
+    margin-top: 6px;
+  }
+
+  #holiday-postcards,
+  #holiday-gallery-rooms {
+    padding: 24px 16px 40px !important;
+  }
+
+  .holiday-thumbnail-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .holiday-thumbnail-card {
+    min-width: 0;
+  }
+
+  .holiday-thumbnail-plaque {
+    overflow-wrap: anywhere;
+  }
+
+  #holiday-gallery-rooms > div:last-child {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  #holiday-gallery-rooms article {
+    min-height: 0 !important;
+    padding: 24px !important;
+  }
+
+  .holiday-page > section:nth-of-type(4) {
+    padding: 40px 16px !important;
+  }
+
+  .holiday-page > section:nth-of-type(4) > div {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  .holiday-page > section:nth-of-type(5) {
+    padding: 40px 16px !important;
+  }
+
+  .holiday-page > section:nth-of-type(6) {
+    padding: 0 16px 40px !important;
+  }
+
+  .holiday-page > section:nth-of-type(6) > div {
+    padding: 28px 18px !important;
+  }
+
+  .holiday-page > section h2 {
+    font-size: 30px !important;
+  }
+
+  .holiday-page > footer {
+    padding: 35px 16px !important;
+  }
+
+  .holiday-page > footer h2 {
+    font-size: 25px !important;
+  }
+}
       `}</style>
 
       <header

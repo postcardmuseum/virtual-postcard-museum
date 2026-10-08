@@ -105,6 +105,7 @@ export default function HumorPage() {
 
   return (
     <main
+    className="humor-page"
       style={{
         minHeight: "100vh",
         backgroundColor: "#f7f0df",
@@ -317,6 +318,214 @@ export default function HumorPage() {
             zoom: 1;
           }
         }
+          @media (max-width: 560px) {
+  .humor-page > header > div {
+    padding: 14px 16px !important;
+  }
+
+  .humor-page > header nav {
+    justify-content: center !important;
+    gap: 14px !important;
+    text-align: center;
+  }
+
+  .humor-page > header nav > div {
+    justify-content: center;
+    gap: 12px !important;
+    font-size: 13px !important;
+  }
+
+  .humor-page > header > section {
+    padding: 28px 16px 65px !important;
+  }
+
+  .humor-page > header > section > p:first-child {
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+    line-height: 1.5;
+  }
+
+  .humor-page > header > section > div {
+    padding: 12px 22px !important;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .humor-page > header > section > div > span {
+    font-size: 38px !important;
+    letter-spacing: 2px !important;
+  }
+
+  .humor-page > header h1 {
+    font-size: 36px !important;
+    margin-top: 20px !important;
+  }
+
+  .humor-page > header > section > p:last-child {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    margin-top: 16px !important;
+  }
+
+  .humor-page > section:first-of-type {
+    padding: 0 12px !important;
+    margin: -30px auto 28px !important;
+  }
+
+  .humor-page > section:first-of-type > div {
+    padding: 12px !important;
+    border-width: 5px !important;
+  }
+
+  .humor-featured-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .humor-featured-layout > div {
+    min-width: 0;
+  }
+
+  .humor-featured-compact {
+    width: 100%;
+    max-width: 100%;
+    zoom: 1;
+  }
+
+  .humor-frame-shell {
+    padding: 4px;
+  }
+
+  .humor-side-actions {
+    gap: 14px;
+  }
+
+  .humor-continue-plaque,
+  .humor-continue-plaque.secondary {
+    min-height: 0;
+    padding: 16px 12px;
+  }
+
+  .humor-continue-plaque strong {
+    font-size: 21px;
+  }
+
+  .humor-continue-plaque b {
+    font-size: 24px;
+    margin-top: 6px;
+  }
+
+  #humor-postcards,
+  #humor-gallery-rooms {
+    padding: 24px 16px 40px !important;
+  }
+
+  .humor-thumbnail-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .humor-thumbnail-card {
+    min-width: 0;
+  }
+
+  .humor-thumbnail-plaque {
+    overflow-wrap: anywhere;
+  }
+
+  #humor-gallery-rooms > div:last-child {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  #humor-gallery-rooms article {
+    min-height: 0 !important;
+    padding: 24px !important;
+  }
+
+  .humor-page > section:nth-of-type(4) {
+    padding: 40px 16px !important;
+  }
+
+  .humor-page > section:nth-of-type(4) > div {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 24px !important;
+  }
+
+  .humor-page > section:nth-of-type(5) {
+    padding: 40px 16px !important;
+  }
+
+  .humor-page > section:nth-of-type(6) {
+    padding: 0 16px 40px !important;
+  }
+
+  .humor-page > section:nth-of-type(6) > div {
+    padding: 28px 18px !important;
+  }
+
+  .humor-page > section h2 {
+    font-size: 30px !important;
+  }
+
+  .humor-page > footer {
+    padding: 35px 16px !important;
+  }
+
+  .humor-page > footer h2 {
+    font-size: 25px !important;
+  }
+}@media (max-width: 560px) {
+  .humor-featured-wrap > section {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100%;
+  }
+
+  .humor-featured-wrap > section > div {
+    padding: 18px 12px !important;
+    border-width: 6px !important;
+  }
+
+  .humor-featured-wrap > section > div > p:first-child {
+    font-size: 11px;
+    letter-spacing: 1.5px !important;
+    line-height: 1.5;
+  }
+
+  .humor-featured-wrap > section > div > h2 {
+    font-size: 27px !important;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+
+  .humor-featured-wrap > section > div > h2 + p {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .humor-featured-wrap .vpm-postcard-stage {
+    padding: 10px !important;
+  }
+
+  .humor-featured-wrap .vpm-postcard-face {
+    border-width: 4px;
+  }
+
+  .humor-featured-wrap .vpm-museum-control {
+    min-width: 0 !important;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 8px !important;
+    white-space: normal;
+  }
+
+  .humor-featured-wrap > section > div > div:last-child {
+    padding: 12px !important;
+    overflow-wrap: anywhere;
+  }
+}
+  
       `}</style>
 
       <header
