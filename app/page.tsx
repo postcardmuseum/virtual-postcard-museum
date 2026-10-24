@@ -1026,9 +1026,12 @@ export default function Home() {
                   {/* FINAL ENGRAVED MUSEUM PLAQUE */}
                   <div
                     style={{
-                      maxWidth: "320px",
-                      margin: "-12px auto 0",
-                      padding: "5px 20px 6px",
+                      maxWidth: "520px",
+width: "100%",
+boxSizing: "border-box",
+margin: "-12px auto 0",
+padding: "9px 26px 10px",
+textAlign: "center",
                       borderRadius: "3px",
                       background:
                         "linear-gradient(180deg, #ecd487 0%, #ca9a40 48%, #a66f21 100%)",
@@ -1079,7 +1082,9 @@ export default function Home() {
                         display: "block",
                         fontSize: "15px",
                         letterSpacing: "0.15px",
-                        whiteSpace: "nowrap",
+                      whiteSpace: "normal",
+overflowWrap: "anywhere",
+lineHeight: "1.25",
                       }}
                     >
                       {featuredPostcard.title || "Untitled Postcard"}
